@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <body>
+    <!--Top Navigation Bar-->
+    <header id="navbar">
+      <a href="#aboutMe" class="navItem" id="aboutMeNav">About Me</a>
+      <a href="#skills" class="navItem" id="skillsNav">Skills</a>
+      <a href="#projects" class="navItem" id="projectsNav">Projects</a>
+      <a href="#experience" class="navItem" id="experienceNav">Experience</a>
+      <a href="#testimonials" class="navItem" id="testimonialsNav"
+        >Testimonials</a
+      >
+      <a href="#education" class="navItem" id="educationNav">Education</a>
+      <a href="#blogs" class="navItem" id="blogsNav">Blogs</a>
+      <a href="#contactMe" class="navItem" id="contactMeNav">Contact Me</a>
+      <a
+        href="javascript:void(0);"
+        id="hamburger"
+        class="icon"
+        onclick="toggleHamburgerMenuIcon()"
+      >
+        <i class="fa fa-bars"></i>
+      </a>
+    </header>
+
+    <main>
+      <!--About Me-->
+      <section id="aboutMe">
+        <h1 id="aboutMeHeader">About Me</h1>
+        <img
+          class="aboutMeImage"
+          src="./images/profile_image.jpg"
+          alt="Profile Picture"
+        />
+        <div class="aboutMeDescription">
+          <h2 id="myName">Ratul Mazumder</h2>
+          <h3 id="myProfession">Full Stack Developer</h3>
+          <p id="myDescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+          </p>
+        </div>
+      </section>
+
+      <!--Skills-->
+      <section id="skills">
+        <h1 id="skillsHeader">Skills</h1>
+        <!--Technical Skills-->
+        <div class="skillInfo" id="technicalSkills">
+          <h3 class="skillTypeHeading">Technical Skills</h3>
+          <ul>
+            <li><b>Core Languages:</b> HTML5, CSS3, JavaScript (ES6+)</li>
+            <li><b>Modern Frameworks:</b> React, Angular, Vue.js</li>
+            <li>
+              <b>UI/UX Principles:</b> User-centered design, accessibility,
+              responsiveness
+            </li>
+            <li>
+              <b>Styling Libraries:</b> Bootstrap, Material-UI, Tailwind CSS
+            </li>
+            <li>
+              <b>Frontend Optimization:</b> Performance best practices, lazy
+              loading, caching
+            </li>
+            <li>
+              <b>Server-Side Languages:</b> Python (Django, Flask), Node.js
+              (Express.js), Java (Spring), PHP (Laravel, Symfony)
+            </li>
+            <li>
+              <b>Databases:</b> Relational (MySQL, PostgreSQL, SQL Server) and
+              NoSQL (MongoDB, Redis)
+            </li>
+            <li>
+              <b>APIs and Microservices:</b> RESTful API design, GraphQL,
+              communication protocols
+            </li>
+            <li>
+              <b>Security:</b> Best practices for authentication, authorization,
+              data encryption
+            </li>
+            <li>
+              <b>Deployment and Operations:</b> Cloud platforms (AWS, Azure,
+              GCP), containerization (Docker, Kubernetes)
+            </li>
+          </ul>
+        </div>
+        <!--Soft Skills-->
+        <div class="skillInfo" id="softSkills">
+          <h3 class="skillTypeHeading">Soft Skills</h3>
+          <ul>
+            <li>
+              Convey complex technical concepts clearly and concisely, both
+              verbally and in writing.
+            </li>
+            <li>
+              Work effectively with designers, product managers, and other
+              developers towards common goals.
+            </li>
+            <li>
+              Identify and analyze problems systematically, break them down into
+              smaller parts, and explore potential solutions.
+            </li>
+            <li>
+              Evaluate different solutions objectively, consider their
+              feasibility and trade-offs, and arrive at the best option.
+            </li>
+            <li>
+              Adapt to new technologies, frameworks, and best practices readily.
+            </li>
+            <li>
+              Share ideas, knowledge, and responsibilities effectively within a
+              team environment.
+            </li>
+            <li>
+              Prioritize tasks effectively, estimate effort accurately, and meet
+              deadlines consistently.
+            </li>
+            <li>
+              Maintain a well-structured codebase and development environment.
+            </li>
+            <li>Embrace challenges as opportunities to learn and improve.</li>
+            <li>
+              Be open to constructive feedback and use it to enhance your
+              skills.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--Projects-->
+      <section id="projects">
+        <h1 id="projectHeader">Projects</h1>
+        <!--Project Item-->
+        <div class="projectItem" id="projectItem1">
+          <img
+            src="./images/project1.jpg"
+            alt="Project 1"
+            class="projectImage"
+          />
+          <h4 class="projectTitle">Project #1: Lorem Ipsum Dolor</h4>
+          <p class="projectDescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+        <!--Project Item-->
+        <div class="projectItem" id="projectItem2">
+          <img
+            src="./images/project2.jpg"
+            alt="Project 2"
+            class="projectImage"
+          />
+          <h4 class="projectTitle">Project #2: Lorem Ipsum Dolor</h4>
+          <p class="projectDescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+        <!--Project Item-->
+        <div class="projectItem" id="projectItem3">
+          <img
+            src="./images/project3.jpg"
+            alt="Project 3"
+            class="projectImage"
+          />
+          <h4 class="projectTitle">Project #3: Lorem Ipsum Dolor</h4>
+          <p class="projectDescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+        <!--Project Item-->
+        <div class="projectItem" id="projectItem4">
+          <img
+            src="./images/project4.jpg"
+            alt="Project 4"
+            class="projectImage"
+          />
+          <h4 class="projectTitle">Project #4: Lorem Ipsum Dolor</h4>
+          <p class="projectDescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+      </section>
+
+      <!--Experience-->
+      <section id="experience">
+        <h1 id="experienceHeader">Experience</h1>
+        <!--Experience 1-->
+        <div id="experience1">
+          <span class="position"><b>Position 1</b></span>
+          <span class="company">Company</span>
+          <span class="location">Location</span>
+          <span class="dates">MM/dd/YYYY-MM/dd/YYYY</span>
+          <ul class="experienceDescription">
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </li>
+            <li>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat.
+            </li>
+            <li>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </li>
+            <li>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </li>
+            <li>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat.
+            </li>
+            <li>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </li>
+            <li>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </li>
+          </ul>
+        </div>
+
+        <!--Experience 2-->
+        <div id="experience2">
+          <span class="position"><b>Position 2</b></span>
+          <span class="company">Company</span>
+          <span class="location">Location</span>
+          <span class="dates">MM/dd/YYYY-MM/dd/YYYY</span>
+          <ul class="experienceDescription">
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </li>
+            <li>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat.
+            </li>
+            <li>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </li>
+            <li>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </li>
+            <li>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat.
+            </li>
+            <li>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </li>
+            <li>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--Testimonials-->
+      <section id="testimonials" class="sectionDecoration">
+        <h1 id="testimonialHeader">Testimonials</h1>
+        <!--Testimonial Item-->
+        <div class="testimonialItem" id="testimonialItem1">
+          <img
+            src="./images/testimonial.jpg"
+            alt="Person 1"
+            class="testimonialImage"
+          />
+          <p class="testimonialDescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Ut enim ad minim veniam.
+          </p>
+          <h3 class="testimonialPerson">- Person 1</h3>
+        </div>
+        <!--Testimonial Item-->
+        <div class="testimonialItem" id="testimonialItem2">
+          <img
+            src="./images/testimonial.jpg"
+            alt="Person 2"
+            class="testimonialImage"
+          />
+          <p class="testimonialDescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Ut enim ad minim veniam.
+          </p>
+          <h3 class="testimonialPerson">- Person 2</h3>
+        </div>
+        <!--Testimonial Item-->
+        <div class="testimonialItem" id="testimonialItem3">
+          <img
+            src="./images/testimonial.jpg"
+            alt="Person 3"
+            class="testimonialImage"
+          />
+          <p class="testimonialDescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Ut enim ad minim veniam.
+          </p>
+          <h3 class="testimonialPerson">- Person 3</h3>
+        </div>
+        <!--Testimonial Item-->
+        <div class="testimonialItem" id="testimonialItem4">
+          <img
+            src="./images/testimonial.jpg"
+            alt="Person 4"
+            class="testimonialImage"
+          />
+          <p class="testimonialDescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Ut enim ad minim veniam.
+          </p>
+          <h3 class="testimonialPerson">- Person 4</h3>
+        </div>
+      </section>
+
+      <!--Education-->
+      <section id="education">
+        <h1 id="educationHeader">Education</h1>
+        <!--Education 1-->
+        <div class="educationInfo" id="education1">
+          <h3 class="educationInstitutionName">Institution X</h3>
+          <span>Location</span><br />
+          <span>MM/YYYY-MM/YYYY</span><br /><br />
+          <span><b>Master of Computer Science</b></span
+          ><br />
+          <span>GPA: 4.0</span>
+        </div>
+        <!--Education 2-->
+        <div class="educationInfo" id="education2">
+          <h3 class="educationInstitutionName">Institution Y</h3>
+          <span>Location</span><br />
+          <span>MM/YYYY-MM/YYYY</span><br /><br />
+          <span><b>Bachelor of Computer Science</b></span
+          ><br />
+          <span>GPA: 4.0</span>
+        </div>
+      </section>
+
+      <!--Blogs-->
+      <section id="blogs">
+        <h1 id="blogHeader">Blogs</h1>
+        <!--Blog Item-->
+        <div class="blogItem" id="blogItem1">
+          <img src="./images/blog.jpg" alt="Blog 1" class="blogImage" />
+          <h3 class="blogTitle">Blog #1</h3>
+          <p class="blogDescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Ut enim ad minim veniam.
+          </p>
+          <span class="blogDate">MM/dd/YYYY</span>
+        </div>
+        <!--Blog Item-->
+        <div class="blogItem" id="blogItem2">
+          <img src="./images/blog.jpg" alt="Blog 2" class="blogImage" />
+          <h3 class="blogTitle">Blog #2</h3>
+          <p class="blogDescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Ut enim ad minim veniam.
+          </p>
+          <span class="blogDate">MM/dd/YYYY</span>
+        </div>
+        <!--Blog Item-->
+        <div class="blogItem" id="blogItem3">
+          <img src="./images/blog.jpg" alt="Blog 3" class="blogImage" />
+          <h3 class="blogTitle">Blog #3</h3>
+          <p class="blogDescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Ut enim ad minim veniam.
+          </p>
+          <span class="blogDate">MM/dd/YYYY</span>
+        </div>
+        <!--Blog Item-->
+        <div class="blogItem" id="blogItem4">
+          <img src="./images/blog.jpg" alt="Blog 4" class="blogImage" />
+          <h3 class="blogTitle">Blog #4</h3>
+          <p class="blogDescription">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Ut enim ad minim veniam.
+          </p>
+          <span class="blogDate">MM/dd/YYYY</span>
+        </div>
+      </section>
+
+      <!--Contact Me-->
+      <section id="contactMe">
+        <h1 id="contactMeHeader">Contact Me</h1>
+        <form action="/" id="contactMeBlock">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            class="inputDecoration"
+            id="nameInput"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="inputDecoration"
+            id="emailInput"
+          />
+          <textarea
+            name="message"
+            id="messageInput"
+            class="inputDecoration"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+          <input type="submit" value="Send Message" id="sendMessage" />
+        </form>
+      </section>
+
+      <!--Bottom Links-->
+      <footer class="bottomLinks">
+        <img src="./images/phone.png" alt="phone" class="socialLink" />
+        <img src="./images/email.png" alt="email" class="socialLink" />
+        <img src="./images/linkedin.png" alt="linkedin" class="socialLink" />
+        <img src="./images/github.png" alt="github" class="socialLink" />
+      </footer>
+    </main>
+
+    <script>
+      function toggleHamburgerMenuIcon() {
+        let myNavbar = document.querySelector("#navbar");
+        if (myNavbar.classList.length === 0) {
+          myNavbar.className = "responsive";
+        } else {
+          myNavbar.classList.remove("responsive");
+        }
+      }
+    </script>
+  </body>
+</html>

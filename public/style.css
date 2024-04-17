@@ -1,0 +1,1019 @@
+:root {
+  --navItem-border-radius: 8px;
+  --section-header-font-size: 3vw;
+  --section-padding: 10vh 5vw 10vh 5vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar {
+  background-color: black;
+  padding: 1vh 0.5vw 1vh 0.5vw;
+  overflow: hidden;
+  width: 100%;
+}
+
+.navItem {
+  float: left;
+  display: block;
+  margin: 0 1.25%;
+  width: 10%;
+  font-size: 1.15vw;
+  text-align: center;
+  border-radius: var(--navItem-border-radius);
+  text-decoration: none;
+  color: white;
+  height: 4vh;
+  padding: 0.5vh 0 0.5vh 0;
+}
+
+.navItem:hover {
+  background-color: grey;
+  text-decoration: none;
+  color: white;
+}
+
+.icon {
+  display: none;
+}
+
+#navBar::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.navItem:hover {
+  cursor: pointer;
+}
+
+.socialLink:hover {
+  cursor: pointer;
+}
+
+#aboutMe {
+  background-color: #546a7b;
+  color: snow;
+  padding: 15vh 5vw 10vh 5vw;
+  display: grid;
+  grid-template-rows: 0.2fr 0.8fr;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-areas:
+    "aboutMeHeader aboutMeHeader"
+    "aboutMeImage aboutMeDescription";
+  justify-items: center;
+}
+
+#aboutMeHeader {
+  width: 100%;
+  grid-area: aboutMeHeader;
+  margin-bottom: 10vh;
+  font-size: var(--section-header-font-size);
+  text-align: center;
+}
+.aboutMeImage {
+  width: 40vw;
+  height: 50vh;
+  grid-area: aboutMeImage;
+  border-radius: 8px;
+}
+.aboutMeDescription {
+  width: 40vw;
+  height: 50vh;
+  grid-area: aboutMeDescription;
+  overflow: hidden;
+}
+
+#myDescription {
+  font-size: 1.3vw;
+  text-align: left;
+  height: 38vh;
+  overflow: hidden;
+}
+
+#myName {
+  font-size: 2.5vw;
+  height: 6vh;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#myProfession {
+  font-size: 1.75vw;
+  height: 6vh;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#skills {
+  background-color: #abc4ff;
+  padding: var(--section-padding);
+  display: grid;
+  grid-template-rows: 0.2fr 0.8fr;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-areas:
+    "skillsHeader skillsHeader"
+    "technicalSkills softSkills";
+  justify-items: center;
+  grid-gap: 5vw;
+}
+
+#skillsHeader {
+  width: 100%;
+  grid-area: skillsHeader;
+  margin-bottom: 0;
+  font-size: var(--section-header-font-size);
+  text-align: center;
+}
+
+#technicalSkills {
+  grid-area: technicalSkills;
+  margin-right: 0;
+}
+
+#softSkills {
+  grid-area: softSkills;
+  margin-left: 0;
+}
+
+.skillInfo {
+  background-color: snow;
+  text-align: left;
+  height: 50vh;
+  width: 40vw;
+  font-size: 1.05vw;
+  padding: 10px;
+  overflow: hidden;
+  border: 1px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.skillTypeHeading {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+#projects {
+  background-color: #62929e;
+  padding: var(--section-padding);
+  display: grid;
+  grid-template-rows: 0.2fr 0.4fr 0.4fr;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-areas:
+    "projectHeader projectHeader"
+    "projectItem1 projectItem2"
+    "projectItem3 projectItem4";
+  row-gap: 10vh;
+  column-gap: 8vw;
+}
+
+#projectHeader {
+  width: 100%;
+  grid-area: projectHeader;
+  margin-bottom: 0;
+  font-size: var(--section-header-font-size);
+  text-align: center;
+}
+
+#projectItem1 {
+  grid-area: projectItem1;
+}
+#projectItem2 {
+  grid-area: projectItem2;
+}
+#projectItem3 {
+  grid-area: projectItem3;
+}
+#projectItem4 {
+  grid-area: projectItem4;
+}
+
+.projectItem {
+  height: 36.5vh;
+  width: 40vw;
+  overflow: hidden;
+  border: 1px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 1.75vh;
+  background-color: #fdfdff;
+  display: grid;
+  grid-template-rows: 0.9fr 0.1fr;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-areas:
+    "projectImage projectDescription"
+    "projectTitle projectDescription";
+  grid-gap: 1vh;
+}
+
+.projectDescription {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 32vh;
+  width: 18.9vw;
+  grid-area: projectDescription;
+  font-size: 1.1vw;
+}
+
+.projectImage {
+  height: 29vh;
+  width: 18.9vw;
+  overflow: hidden;
+  object-fit: cover;
+  grid-area: projectImage;
+}
+
+.projectTitle {
+  text-align: center;
+  height: 4vh;
+  grid-area: projectTitle;
+  width: 18.9vw;
+  margin-top: 0;
+  padding: 0.5vh 0;
+  font-size: 1.15vw;
+}
+
+#experience {
+  background-color: #393d3f;
+  color: snow;
+  padding: var(--section-padding);
+  display: grid;
+  grid-template-rows: 0.2fr 0.4fr 0.4fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "experienceHeader"
+    "experience1"
+    "experience2";
+  row-gap: 5vh;
+}
+
+#experienceHeader {
+  width: 100%;
+  grid-area: experienceHeader;
+  font-size: var(--section-header-font-size);
+  margin-bottom: 5vh;
+  text-align: center;
+}
+
+#experience1 {
+  grid-area: experience1;
+}
+
+#experience2 {
+  grid-area: experience2;
+}
+
+#experience1 {
+  display: grid;
+  grid-template-rows: 0.05fr 0.05fr 0.9fr;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-areas:
+    "position location"
+    "company dates"
+    "experienceDescription experienceDescription";
+  padding: 1vh;
+  height: 60vh;
+  overflow: hidden;
+  width: 75%;
+  margin: 0 auto;
+}
+
+#experience2 {
+  display: grid;
+  grid-template-rows: 0.05fr 0.05fr 0.9fr;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-areas:
+    "position location"
+    "company dates"
+    "experienceDescription experienceDescription";
+  padding: 1vh;
+  height: 60vh;
+  overflow: hidden;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.position {
+  grid-area: position;
+  text-align: left;
+  font-size: 1.7vw;
+}
+.location {
+  grid-area: location;
+  text-align: right;
+  font-size: 1.2vw;
+}
+.company {
+  grid-area: company;
+  text-align: left;
+  font-size: 1.2vw;
+}
+.dates {
+  grid-area: dates;
+  text-align: right;
+  font-size: 1.2vw;
+}
+.experienceDescription {
+  grid-area: experienceDescription;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1vw;
+}
+
+#testimonials {
+  background-color: #ffee93;
+  padding: var(--section-padding);
+  display: grid;
+  grid-template-rows: 0.2fr 0.8fr;
+  grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+  grid-template-areas:
+    "testimonialHeader testimonialHeader testimonialHeader testimonialHeader"
+    "testimonialItem1 testimonialItem2 testimonialItem3 testimonialItem4";
+  column-gap: 3vw;
+}
+
+.testimonialPerson {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1.2vw;
+}
+
+#testimonialHeader {
+  width: 100%;
+  grid-area: testimonialHeader;
+  margin-bottom: 10vh;
+  font-size: var(--section-header-font-size);
+  text-align: center;
+}
+
+#testimonialItem1 {
+  grid-area: testimonialItem1;
+}
+#testimonialItem2 {
+  grid-area: testimonialItem2;
+}
+#testimonialItem3 {
+  grid-area: testimonialItem3;
+}
+#testimonialItem4 {
+  grid-area: testimonialItem4;
+}
+
+.testimonialItem {
+  text-align: center;
+  background-color: snow;
+  border: 1px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 1vh;
+  height: 82vh;
+  width: 20vw;
+  overflow: hidden;
+}
+
+.testimonialDescription {
+  font-size: 1.1vw;
+}
+
+.testimonialImage {
+  border-radius: 75%;
+  object-fit: cover;
+  width: 18vw;
+  height: 37vh;
+}
+
+#education {
+  background-color: #aeb9c2;
+  padding: var(--section-padding);
+  display: grid;
+  grid-template-rows: 0.2fr 0.8fr;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-areas:
+    "educationHeader educationHeader"
+    "education1 education2";
+}
+
+#educationHeader {
+  width: 100%;
+  grid-area: educationHeader;
+  margin-bottom: 10vh;
+  font-size: var(--section-header-font-size);
+  text-align: center;
+}
+
+#education1 {
+  grid-area: education1;
+}
+
+#education2 {
+  grid-area: education2;
+}
+
+.educationInfo {
+  text-align: left;
+  margin-left: 15vw;
+  width: 25vw;
+  height: 20vh;
+  font-size: 1.2vw;
+  color: rgb(43, 33, 20);
+  overflow: hidden;
+}
+
+.educationInstitutionName {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+#blogs {
+  background-color: #c6c5b9;
+  padding: var(--section-padding);
+  display: grid;
+  grid-template-rows: 0.2fr 0.8fr;
+  grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+  grid-template-areas:
+    "blogHeader blogHeader blogHeader blogHeader"
+    "blogItem1 blogItem2 blogItem3 blogItem4";
+  column-gap: 3vw;
+}
+
+#blogHeader {
+  width: 100%;
+  grid-area: blogHeader;
+  margin-bottom: 10vh;
+  font-size: var(--section-header-font-size);
+  text-align: center;
+}
+
+.blogItem {
+  height: 65vh;
+  background-color: #fdfdff;
+  width: 20vw;
+  height: 95vh;
+  padding: 1.1vh;
+  text-align: center;
+  border: 1px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.blogDate {
+  font-size: 1.1vw;
+}
+
+#blogItem1 {
+  grid-area: blogItem1;
+}
+#blogItem2 {
+  grid-area: blogItem2;
+}
+#blogItem3 {
+  grid-area: blogItem3;
+}
+#blogItem4 {
+  grid-area: blogItem4;
+}
+
+.blogTitle {
+  margin-top: 1vh;
+  font-size: 1.5vw;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.blogDescription {
+  text-align: left;
+  font-size: 1.2vw;
+}
+
+.blogImage {
+  object-fit: cover;
+  width: 100%;
+  height: 40vh;
+}
+
+#contactMe {
+  background-color: #fdfdff;
+  padding: var(--section-padding);
+}
+
+#contactMeHeader {
+  width: 100%;
+  margin-bottom: 10vh;
+  font-size: var(--section-header-font-size);
+  text-align: center;
+}
+
+#contactMeBlock {
+  padding: var(--section-padding);
+  display: grid;
+  grid-template-rows: 0.1fr 0.8fr 0.1fr;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-areas:
+    "nameInput emailInput"
+    "messageInput messageInput"
+    "sendMessage sendMessage";
+  column-gap: 3vw;
+  row-gap: 2vh;
+  background-color: #393d3f;
+  border: 1px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 2vh;
+  width: 70vw;
+  height: 50vh;
+  margin: auto;
+  border-radius: 10px;
+}
+
+#nameInput {
+  grid-area: nameInput;
+}
+
+#emailInput {
+  grid-area: emailInput;
+}
+
+#messageInput {
+  grid-area: messageInput;
+  height: 32.5vh;
+}
+
+.inputDecoration {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1vh;
+}
+
+#sendMessage {
+  width: 20vw;
+  background-color: #1a94ff;
+  color: white;
+  padding: 1vh;
+  border-radius: 5px;
+  cursor: pointer;
+  grid-area: sendMessage;
+  margin: 0 auto;
+}
+
+.bottomLinks {
+  background-color: #c6c5b9;
+  padding-top: 5vh;
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+.socialLink {
+  margin: auto 1vw auto 1vw;
+  width: 5vh;
+  height: 5vh;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 500px) {
+  .navItem {
+    display: none;
+  }
+  #navbar #hamburger {
+    float: right;
+    display: block;
+    color: white;
+    margin: 1vw 2vw 0 0;
+  }
+  #navbar.responsive {
+    position: relative;
+  }
+  #navbar.responsive #hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .navItem {
+    font-size: 2.5vw;
+    padding-left: 1vw;
+    width: 20%;
+    margin: 1.1vh;
+  }
+
+  .navItem:hover {
+    background-color: black;
+    text-decoration: none;
+    color: white;
+  }
+
+  #navBar::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #aboutMe {
+    padding: var(--section-padding);
+    display: grid;
+    grid-template-rows: 0.2fr 0.4fr 0.4fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "aboutMeHeader"
+      "aboutMeImage"
+      "aboutMeDescription";
+    justify-items: center;
+  }
+  #aboutMeHeader {
+    width: 100%;
+    margin-bottom: 10vh;
+    font-size: 11vw;
+  }
+  .aboutMeImage {
+    width: 90vw;
+    height: 50vh;
+    border-radius: 8px;
+  }
+  .aboutMeDescription {
+    width: 90vw;
+    height: 83vh;
+  }
+
+  #myDescription {
+    font-size: 4vw;
+    text-align: left;
+    height: 65vh;
+  }
+
+  #myName {
+    font-size: 9vw;
+    height: 6vh;
+    margin-bottom: 1.5vh;
+  }
+
+  #myProfession {
+    font-size: 7vw;
+    height: 6vh;
+  }
+
+  #skills {
+    padding: var(--section-padding);
+    display: grid;
+    grid-template-rows: 0.2fr 0.4fr 0.4fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "skillsHeader"
+      "technicalSkills"
+      "softSkills";
+    justify-items: center;
+  }
+
+  #skillsHeader {
+    width: 100%;
+    margin-bottom: 10vh;
+    font-size: 10vw;
+  }
+
+  #technicalSkills {
+    margin-bottom: 5vh;
+    margin-left: 0;
+  }
+
+  #softSkills {
+    margin-left: 0;
+  }
+
+  .skillInfo {
+    text-align: left;
+    height: 73vh;
+    width: 90vw;
+    font-size: 3vw;
+  }
+
+  #projects {
+    padding: var(--section-padding);
+    display: grid;
+    grid-template-rows: 0.1fr 0.225fr 0.225fr 0.225fr 0.225fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "projectHeader"
+      "projectItem1"
+      "projectItem2"
+      "projectItem3"
+      "projectItem4";
+    row-gap: 10vh;
+    justify-items: center;
+  }
+
+  #projectHeader {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 10vw;
+  }
+
+  .projectItem {
+    height: 35vh;
+    width: 90vw;
+    padding: 1vh;
+    background-color: #fdfdff;
+    display: grid;
+    grid-template-rows: 0.9fr 0.1fr;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-areas:
+      "projectImage projectDescription"
+      "projectTitle projectDescription";
+  }
+
+  .projectDescription {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 32vh;
+    width: 42vw;
+    font-size: 2.53vw;
+  }
+
+  .projectImage {
+    height: 29vh;
+    width: 42vw;
+  }
+
+  .projectTitle {
+    text-align: center;
+    height: 4vh;
+    width: 42vw;
+    margin-top: 0;
+    padding: 0.5vh 0;
+    font-size: 2.6vw;
+  }
+
+  #experience {
+    background-color: #393d3f;
+    color: snow;
+    padding: var(--section-padding);
+    display: grid;
+    grid-template-rows: 0.1fr 0.45fr 0.45fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "experienceHeader"
+      "experience1"
+      "experience2";
+  }
+
+  #experienceHeader {
+    width: 100%;
+    font-size: 10vw;
+    margin-bottom: 5vh;
+  }
+
+  #experience1 {
+    display: grid;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.4fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "position"
+      "location"
+      "company"
+      "dates"
+      "experienceDescription";
+    height: 130vh;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    row-gap: 1vh;
+  }
+
+  #experience2 {
+    display: grid;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.4fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "position"
+      "location"
+      "company"
+      "dates"
+      "experienceDescription";
+    height: 130vh;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    row-gap: 1vh;
+  }
+
+  .position {
+    text-align: left;
+    font-size: 5vw;
+  }
+  .location {
+    text-align: left;
+    font-size: 3vw;
+  }
+  .company {
+    text-align: left;
+    font-size: 3vw;
+  }
+  .dates {
+    text-align: left;
+    font-size: 3vw;
+  }
+  .experienceDescription {
+    width: 100%;
+    text-align: left;
+    font-size: 2.8vw;
+    height: 68vh;
+  }
+
+  #testimonials {
+    background-color: #ffee93;
+    padding: var(--section-padding);
+    display: grid;
+    grid-template-rows: 0.05fr 0.2375fr 0.2375fr 0.2375fr 0.2375fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "testimonialHeader"
+      "testimonialItem1"
+      "testimonialItem2"
+      "testimonialItem3"
+      "testimonialItem4";
+    row-gap: 5vh;
+  }
+
+  #testimonialHeader {
+    width: 100%;
+    margin-bottom: 5vh;
+    font-size: 10vw;
+  }
+
+  .testimonialItem {
+    text-align: center;
+    padding: 1vh;
+    height: 77vh;
+    width: 90vw;
+    overflow: hidden;
+  }
+
+  .testimonialDescription {
+    font-size: 3.2vw;
+  }
+
+  .testimonialPerson {
+    font-size: 4vw;
+  }
+
+  .testimonialImage {
+    border-radius: 75%;
+    object-fit: cover;
+    width: 50vw;
+    height: 40vh;
+    margin-top: 1vh;
+  }
+
+  #education {
+    padding: var(--section-padding);
+    display: grid;
+    grid-template-rows: 0.1fr 0.45fr 0.45fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "educationHeader"
+      "education1"
+      "education2";
+    justify-items: center;
+  }
+
+  #educationHeader {
+    width: 100%;
+    margin-bottom: 10vh;
+    font-size: 10vw;
+  }
+
+  .educationInfo {
+    text-align: left;
+    margin-left: 0;
+    width: 70vw;
+    height: 18vh;
+    font-size: 3vw;
+    margin-bottom: 5vh;
+  }
+
+  .educationInstitutionName {
+    text-align: left;
+  }
+
+  #blogs {
+    padding: var(--section-padding);
+    display: grid;
+    grid-template-rows: 0.05fr 0.2375fr 0.2375fr 0.2375fr 0.2375fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "blogHeader"
+      "blogItem1"
+      "blogItem2"
+      "blogItem3"
+      "blogItem4";
+    justify-items: center;
+    row-gap: 5vh;
+  }
+
+  #blogHeader {
+    width: 100%;
+    margin-bottom: 5vh;
+    font-size: 10vw;
+  }
+
+  .blogItem {
+    height: 65vh;
+    width: 90vw;
+    height: 68vh;
+    padding: 1.1vh;
+    text-align: center;
+  }
+
+  .blogDate {
+    font-size: 2.7vw;
+  }
+
+  .blogTitle {
+    margin-top: 1vh;
+    font-size: 5vw;
+  }
+
+  .blogDescription {
+    text-align: left;
+    font-size: 3vw;
+  }
+
+  .blogImage {
+    object-fit: cover;
+    width: 100%;
+    height: 32vh;
+  }
+
+  #contactMe {
+    padding: var(--section-padding);
+  }
+
+  #contactMeHeader {
+    width: 100%;
+    margin-bottom: 10vh;
+    font-size: 10vw;
+  }
+
+  #contactMeBlock {
+    padding: var(--section-padding);
+    display: grid;
+    grid-template-rows: 0.2fr 0.2fr 0.4fr 0.2fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nameInput"
+      "emailInput"
+      "messageInput"
+      "sendMessage";
+    column-gap: 3vw;
+    row-gap: 2vh;
+    background-color: #393d3f;
+    border: 1px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 2vh;
+    width: 90vw;
+    height: 57vh;
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  #messageInput {
+    height: 32.5vh;
+  }
+
+  .inputDecoration {
+    padding: 1vh;
+  }
+
+  #sendMessage {
+    width: 50vw;
+  }
+
+  .bottomLinks {
+    padding-top: 3vh;
+    text-align: center;
+    padding-bottom: 3vh;
+  }
+
+  .socialLink {
+    margin: auto 2vw auto 2vw;
+    width: 3vh;
+    height: 3vh;
+  }
+}
