@@ -11,10 +11,7 @@ const handler = async (event, context) => {
     return JSON.stringify(data);
   } catch (error) {
     console.error(error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ msg: "Failed to connect to database" }),
-    };
+    return JSON.stringify({ msg: "Failed to connect to database" });
   } finally {
     await client.close();
   }
