@@ -8,16 +8,6 @@ const handler = async (event, context) => {
   try {
     await client.connect();
     const data = await findPokemonData(client);
-    if (data.length === 0) {
-      return {
-        statusCode: 404,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ msg: "No Pokemon data found" }),
-      };
-    }
     return {
       statusCode: 200,
       headers: {
@@ -27,7 +17,6 @@ const handler = async (event, context) => {
       body: JSON.stringify(data),
     };
   } catch (error) {
-    console.error(error);
     return {
       statusCode: 500,
       headers: {
