@@ -528,7 +528,9 @@
             rows="10"
             placeholder="Message"
           ></textarea>
-          <input type="submit" value="Send Message" id="sendMessage" />
+          <button id="sendMessage" type="button" onclick="sendEmail()">
+            Send Message
+          </button>
         </form>
       </section>
 
@@ -541,7 +543,41 @@
       </footer>
     </main>
 
-    <script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("qaf7tf8I2zGgX7Hi3");
+      })();
+
+      async function sendEmail() {
+        let messageParameters = {
+          name: document.getElementById("nameInput").value,
+          email: document.getElementById("emailInput").value,
+          message: document.getElementById("messageInput").value,
+        };
+
+        const serviceID = "service_hrlb8c9";
+        const templateID = "template_vg1sq4d";
+
+        try {
+          const response = await emailjs.send(
+            serviceID,
+            templateID,
+            messageParameters
+          );
+          alert("Email sent successfully!");
+          document.getElementById("nameInput").value = "";
+          document.getElementById("emailInput").value = "";
+          document.getElementById("messageInput").value = "";
+        } catch (error) {
+          console.log(error);
+          alert("Failed to send email. Please try again.");
+        }
+      }
+
       function toggleHamburgerMenuIcon() {
         let myNavbar = document.querySelector("#navbar");
         if (myNavbar.classList.length === 0) {
